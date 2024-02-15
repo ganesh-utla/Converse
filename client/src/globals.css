@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@layer base {
+  * {
+    @apply box-border list-none p-0 m-0 scroll-smooth;
+  }
+
+  body {
+    @apply bg-dark-3 text-light-2 min-h-screen font-poppins;
+  }
+
+  h1 {
+    @apply text-3xl font-bold;
+  }
+  h2 {
+    @apply text-2xl font-bold;
+  }
+  h3 {
+    @apply text-xl font-bold;
+  }
+
+  *::-webkit-scrollbar {
+    width: 3px;
+    border-radius: 2px;
+  }
+
+  *::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  *::-webkit-scrollbar-thumb {
+    background: #838383;
+    border-radius: 50px;
+  }
+  
+  *::-webkit-scrollbar-thumb:hover {
+    background: #838383;
+  }
+  
+}
+
+
+@layer utilities {
+
+  .join-input {
+    @apply w-full px-3 py-2 border-2 border-gray-2 bg-light-3 rounded-lg outline-none outline-offset-0 focus:outline-2 focus:outline-primary-400 text-dark-4 placeholder:text-gray-2;
+  }
+  
+  .join-button {
+    @apply w-full py-2 bg-primary-500 rounded-lg hover:bg-primary-600 active:bg-primary-500 disabled:cursor-not-allowed transition-all;
+  }
+  
+  .chat-input { 
+    @apply w-[10%] px-3 py-2 border-2 border-gray-2 bg-light-3 rounded-lg outline-none outline-offset-0 focus:outline-2 focus:outline-primary-400 text-dark-4 placeholder:text-gray-2 flex-grow;
+  }
+
+  .chat-button {
+    @apply bg-primary-500 p-2 rounded-lg hover:bg-primary-600 active:bg-primary-600 disabled:cursor-not-allowed transition-all
+  }
+
+}
