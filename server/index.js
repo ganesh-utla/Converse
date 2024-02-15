@@ -16,7 +16,7 @@ const io = new Server(server, {
 const router = require('./router');
 const { getUser, removeUser, addUser, getUsersInRoom } = require('./users');
 
-const allowedUrls = ["http://localhost:5173/", `${process.env.CLIENT_ORIGIN}`];
+const allowedUrls = ["http://localhost:5173/", `${process.env.CLIENT_ORIGIN}/`, `${process.env.CLIENT_ORIGIN}`];
 const corsOptions = {
   origin: (origin, callback) => {
     if (origin===undefined || allowedUrls.indexOf(origin) !== -1) {
