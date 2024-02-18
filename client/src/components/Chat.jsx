@@ -71,6 +71,7 @@ const Chat = () => {
 
   const handleChange = (event) => {
     const fileUploaded = event.target.files[0];
+    if (!fileUploaded) return;
     getBase64(fileUploaded, (res) => {
       socket.emit('sendMessage', {file: res}, () => {});
     });
