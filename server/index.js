@@ -50,7 +50,9 @@ io.on('connection', (socket) => {
 
   socket.on('sendMessage', ({message, file}, callback) => {
     const user = getUser(socket.id);
-    io.to(user.roomId).emit('message', { user: user.name, text: message, file});
+    if (user) {
+      io.to(user.roomId).emit('message', { user: user.name, text: message, file});
+    }
     callback();
   });
 
